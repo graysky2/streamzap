@@ -19,4 +19,4 @@ Getting the [Streamzap USB remote](http://www.amazon.com/Streamzap-USBIR2-PC-Rem
 ```
 
 * streamzap.local should be installed to /etc/rc_keymaps
-* keyboard.xml to ~/.xbmc/userdata/keymaps and is only for user with xbmc
+* keyboard.xml to ~/.xbmc/userdata/keymaps and is only for use with xbmc
