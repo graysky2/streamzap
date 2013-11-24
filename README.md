@@ -25,11 +25,7 @@ Getting the [Streamzap USB remote](http://www.amazon.com/Streamzap-USBIR2-PC-Rem
 ### Syntax of /etc/rc_keymaps/streamzap.local
 The syntax of the keymap `scancode button_name`
 
-### Show Availble Scancodes
-The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available keycodes or see the section below for this remote.
-
-### Show Button Names
-Note - If using the provided streamzap.local, this step is not needed as the output will be a parsed version of that file.
+### Show Available Scancodes
 Execute `ir-keytable` without any arguments.  Example:
 ```
 # ir-keytable
@@ -43,3 +39,6 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 ```
 
 Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
+
+### Show Availble Button Names
+The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available button names.
