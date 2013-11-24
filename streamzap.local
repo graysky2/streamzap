@@ -1,5 +1,12 @@
+#
+# /etc/rc_keymaps/streamzap.local
+#
+#
 # table streamzap, type: RC-5-SZ
 # customized for mplayer and xbmc by graysky
+#
+# note that the commented lines with scancodes are the original ones
+# offered by the v4l-utils package at the time I wrote this
 
 0x28c0 KEY_0
 0x28c1 KEY_1

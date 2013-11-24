@@ -20,3 +20,26 @@ Getting the [Streamzap USB remote](http://www.amazon.com/Streamzap-USBIR2-PC-Rem
 
 * streamzap.local should be installed to /etc/rc_keymaps
 * keyboard.xml to ~/.xbmc/userdata/keymaps and is only for use with xbmc
+
+## Supplemental Info
+### Syntax of /etc/rc_keymaps/streamzap.local
+The syntax of the keymap `scancode button_name`
+
+### Show Availble Scancodes
+The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available keycodes or see the section below for this remote.
+
+### Show Button Names
+Note - If using the provided streamzap.local, this step is not needed as the output will be a parsed version of that file.
+Execute `ir-keytable` without any arguments.  Example:
+```
+# ir-keytable
+Found /sys/class/rc/rc0/ (/dev/input/event3) with:
+	Driver streamzap, table rc-streamzap
+	Supported protocols: NEC RC-5 RC-6 JVC SONY SANYO LIRC RC-5-SZ other
+	Enabled protocols: RC-5-SZ
+	Name: Streamzap PC Remote Infrared Rec
+	bus: 3, vendor/product: 0e9c:0000, version: 0x0100
+	Repeat delay = 500 ms, repeat period = 125 ms
+```
+
+Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
