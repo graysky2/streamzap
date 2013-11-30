@@ -14,6 +14,7 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 ### For mythtv and mplayer
 * Place the .lirc dir from this repo into your homedir.
 * Place .lircrc into your homedir.
+* For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 ### For xbmc
 * Place Lirc.xml into ~/.xbmc/userdata
