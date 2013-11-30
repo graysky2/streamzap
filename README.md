@@ -16,7 +16,8 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 * Place .lircrc into your homedir.
 
 ### For xbmc
-* Place Lirc.xml into ~/.xbmc/userdata before loading xbmc.
+* Place Lirc.xml into ~/.xbmc/userdata
+* Place remote.xml into ~/.xbmc/userdata/keymaps
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).

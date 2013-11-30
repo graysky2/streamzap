@@ -1,15 +1,18 @@
-<!-- This file contains the mapping of LIRC keys to XBMC keys used in Keymap.xml  -->
+<!-- ~/.xbmc/userdata/Lircmap.xml                                                 -->
+<!--                                                                              -->
+<!-- This file maps XBMC_buttons to LIRC_buttons                                  -->
+<!-- and is works with a custom ~/.xbmc/userdata/remote.xml which maps            -->
+<!-- XBMC_buttons to actions                                                      -->
 <!--                                                                              -->
 <!-- How to add remotes                                                           -->
 <!-- <remote device="name_Lirc_calls_the_remote">                                 -->
 <!--                                                                              -->
 <!-- For the commands the layout following layout is used                         -->
-<!-- <XBMC_COMMAND>LircButtonName</XBMC_COMMAND>                                  -->
-<!--                                                                              -->
-<!-- For a list of XBMC_COMMAND's check out the <remote> sections of keymap.xml   -->
+<!-- <XBMC_button>LIRC_button</XBMC_button>                                       -->
 
 <lircmap>
   <remote device="Streamzap_PC_Remote">
+    <power>KEY_POWER</power>
     <play>KEY_PLAY</play>
     <pause>KEY_PAUSE</pause>
     <stop>KEY_STOP</stop>
@@ -34,7 +37,6 @@
     <volumeminus>KEY_VOLUMEDOWN</volumeminus>
     <mute>KEY_MUTE</mute>
     <record>KEY_RECORD</record>
-    <power>KEY_POWER</power>
     <blue>KEY_BLUE</blue>
     <one>KEY_1</one>
     <two>KEY_2</two>
