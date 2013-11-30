@@ -1,7 +1,24 @@
 ##Streamzap
-Getting the [Streamzap USB remote](http://www.amazon.com/Streamzap-USBIR2-PC-Remote-Control/dp/B00008XETO) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more.  The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel.  These files represent my preferences and are optimized for use with mplayer and xbmc.
+Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
 
-## Installation
+The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, xbmc, and mplayer.
+
+## Option #1 - Full featured operation of mplayer, mythtv, and xbmc using LIRC.
+### Step LIRC
+* Install lirc for your distro.
+* Setup the lirc config to use the streamzap remote by pointing the remote's config file to the daemon. This varies distro-to-distro but is likely /etc/lirc/lircd.conf.  I have provided the upstream file in this repo "lircd.conf.streamzap" for reference.
+* Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
+* Restart X if your just did the aforementioned step for the first time.
+* Start lirc using your init system (systemd, openrc, upstart, etc.)
+
+### For mythtv and mplayer
+* Place the .lirc dir from this repo into your homedir.
+* Place .lircrc into your homedir.
+
+### For xbmc
+* Place Lirc.xml into ~/.xbmc/userdata before loading xbmc.
+
+## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
 * Modify /etc/rc_maps.cfg so the streamzap line points to /etc/rc_keymaps/streamzap.local
 ```
@@ -19,13 +36,12 @@ Getting the [Streamzap USB remote](http://www.amazon.com/Streamzap-USBIR2-PC-Rem
 ```
 
 * streamzap.local should be installed to /etc/rc_keymaps
-* keyboard.xml to ~/.xbmc/userdata/keymaps and is only for use with xbmc
 
-## Supplemental Info
-### Syntax of /etc/rc_keymaps/streamzap.local
+### Supplemental Info
+#### Syntax of /etc/rc_keymaps/streamzap.local
 The syntax of the keymap `scancode button_name`
 
-### Show Available Scancodes
+#### Show Available Scancodes
 Execute `ir-keytable` without any arguments.  Example:
 ```
 # ir-keytable
@@ -40,5 +56,6 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 
 Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
 
-### Show Availble Button Names
+#### Show Availble Button Names
 The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available button names.
+
