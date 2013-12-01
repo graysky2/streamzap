@@ -7,7 +7,7 @@
 # menu          toggles on screen display
 # power/stop    quits mplayer
 # vol+/-        raise and lower volume
-# ok/play toggle pause/play status
+# ok/play       toggle pause/play status
 
 begin
     remote = Streamzap_PC_Remote

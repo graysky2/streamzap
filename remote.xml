@@ -47,15 +47,15 @@
       <up>Up</up>
       <down>Down</down>
       <select>Select</select>
-      <enter>FullScreen</enter> 
+      <enter>FullScreen</enter>
       <pageplus>PageUp</pageplus>
       <pageminus>PageDown</pageminus>
       <back>Back</back>
       <menu>PreviousMenu</menu>
       <title>ContextMenu</title>
       <info>Info</info>
-			<skipplus>BigStepForward</skipplus>
-			<skipminus>BigStepBack</skipminus>
+      <skipplus>BigStepForward</skipplus>
+      <skipminus>BigStepBack</skipminus>
       <display>FullScreen</display>
       <start>PreviousMenu</start>
       <record>Play</record>
