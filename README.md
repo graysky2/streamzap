@@ -6,13 +6,16 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 ## Option #1 - Full featured operation of mplayer, mythtv, and xbmc using LIRC.
 ### Step LIRC
 * Install lirc and/or lirc-utils for your distro.  For Arch, only lirc-utils is required.
-* Setup the lirc config to use the streamzap remote by pointing the remote's config file to the daemon. This varies distro-to-distro.  For Arch, it is /etc/lirc/lircd.conf and it can simply point to the config file like this:
-```
-include "/usr/share/lirc/streamzap/lircd.conf.streamzap"
-```
+* Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
 * Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
 * Restart X if your just did the aforementioned step for the first time.
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
+
+If the included lircd.conf does not work for you, consider generating your own with irrecord.
+```
+irrecord --device=/dev/lirc0 streamzap
+```
+Follow the included instructions.  It is doubtful that the actual scancodes have changed, so you can likely just copy that section into the new file.
 
 ### For mythtv and mplayer
 * Place the .lirc dir from this repo into your homedir.
