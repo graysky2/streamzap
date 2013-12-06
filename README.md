@@ -22,9 +22,19 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * Place .lircrc into your homedir.
 * For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
-### For xbmc
+### For XBMC
 * Place Lirc.xml into ~/.xbmc/userdata
 * Place remote.xml into ~/.xbmc/userdata/keymaps
+
+###Supplemental Info
+#### Mplayer Links
+* [Upstream control file](/etc/mplayer/input.conf)
+* `mplayer -input keylist`
+* `mplayer -input cmdlist`
+
+#### XBMC Upstream Links
+* [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
+* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xmls)
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
@@ -44,16 +54,6 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 ```
 
 * streamzap.local should be installed to /etc/rc_keymaps
-
-###Supplemental Info
-#### Mplayer Links
-* [Upstream control file](/etc/mplayer/input.conf)
-* `mplayer -input keylist`
-* `mplayer -input cmdlist`
-
-#### XBMC Upstream Links
-* [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
-* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xmls)
 
 #### XBMC Files and Formats
 * Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
