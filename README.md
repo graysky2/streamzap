@@ -45,6 +45,22 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 
 * streamzap.local should be installed to /etc/rc_keymaps
 
+###Supplemental Info
+#### Mplayer Links
+* [Upstream control file](/etc/mplayer/input.conf)
+* `mplayer -input keylist`
+* `mplayer -input cmdlist`
+
+#### XBMC Upstream Links
+* [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
+* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xmls)
+
+#### XBMC Files and Formats
+* Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
+* remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
+
+The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
+
 ### Supplemental Info
 #### Syntax of /etc/rc_keymaps/streamzap.local
 The syntax of the keymap `scancode button_name`
