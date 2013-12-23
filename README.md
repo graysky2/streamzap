@@ -4,7 +4,7 @@ Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/i
 The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, xbmc, and mplayer.
 
 ## Option #1 - Full featured operation of mplayer, mythtv, and xbmc using LIRC.
-### Step LIRC
+### Setup LIRC
 * Install lirc and/or lirc-utils for your distro.  For Arch, only lirc-utils is required.
 * Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
 * Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
@@ -25,6 +25,12 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 ### For XBMC
 * Place Lirc.xml into ~/.xbmc/userdata
 * Place remote.xml into ~/.xbmc/userdata/keymaps
+
+#### XBMC Files and Formats
+* Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
+* remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
+
+The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
 
 ###Supplemental Info
 #### Mplayer Links
@@ -54,12 +60,6 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 ```
 
 * streamzap.local should be installed to /etc/rc_keymaps
-
-#### XBMC Files and Formats
-* Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
-* remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
-
-The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
 
 ### Supplemental Info
 #### Syntax of /etc/rc_keymaps/streamzap.local
