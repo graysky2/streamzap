@@ -29,15 +29,15 @@
     <menu>KEY_MENU</menu>
     <title>KEY_RED</title>
     <info>KEY_GREEN</info>
+    <display>KEY_YELLOW</display>
+    <blue>KEY_BLUE</blue>
     <skipplus>KEY_NEXT</skipplus>
     <skipminus>KEY_PREVIOUS</skipminus>
-    <display>KEY_YELLOW</display>
     <record>KEY_RECORD</record>
     <volumeplus>KEY_VOLUMEUP</volumeplus>
     <volumeminus>KEY_VOLUMEDOWN</volumeminus>
     <mute>KEY_MUTE</mute>
     <record>KEY_RECORD</record>
-    <blue>KEY_BLUE</blue>
     <one>KEY_1</one>
     <two>KEY_2</two>
     <three>KEY_3</three>
