@@ -40,7 +40,7 @@ The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
 
 #### XBMC Upstream Links
 * [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
-* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xmls)
+* [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xml)
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
