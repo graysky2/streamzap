@@ -8,7 +8,7 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 * Install lirc and/or lirc-utils for your distro.  For Arch, only lirc-utils is required.
 * Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
 * Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
-* Restart X if your just did the aforementioned step for the first time.
+* Restart X if you just did the aforementioned step for the first time.
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
 If the included lircd.conf does not work for you, consider generating your own with irrecord.
@@ -17,22 +17,22 @@ irrecord --device=/dev/lirc0 streamzap
 ```
 Follow the included instructions.  It is doubtful that the actual scancodes have changed, so you can likely just copy that section into the new file.
 
-### For mythtv and mplayer
+#### For mythtv and mplayer
 * Place the .lirc dir from this repo into your homedir.
 * Place .lircrc into your homedir.
 * For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
-### For XBMC
+#### For XBMC
 * Place Lirc.xml into ~/.xbmc/userdata
 * Place remote.xml into ~/.xbmc/userdata/keymaps
 
-#### XBMC Files and Formats
+##### XBMC Files and Formats
 * Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
 * remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
 
 The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
 
-###Supplemental Info
+### Supplemental Info
 #### Mplayer Links
 * [Upstream control file](/etc/mplayer/input.conf)
 * `mplayer -input keylist`

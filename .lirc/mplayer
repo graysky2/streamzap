@@ -21,7 +21,7 @@ end
 begin
     remote = Streamzap_PC_Remote
     prog = mplayer
-    button = KEY_POWER
+    button = KEY_EXIT
     config = quit
     repeat = 0
     delay = 0
