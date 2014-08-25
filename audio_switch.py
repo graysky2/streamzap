@@ -19,5 +19,5 @@ if not os.path.isfile(tempfile0):
 else:
 	# pulseaudio HDMI out
 		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"PULSE:alsa_output.pci-0000_00_03.0.hdmi-stereo"}, "id":1}')
-		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"TV Speakers", "image":"/var/lib/xbmc/glossy-speaker-icon.png"}, "id":1}')
+		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"TV Speakers", "image":"/var/lib/xbmc/hdtv.png"}, "id":1}')
 		os.remove(tempfile0)
