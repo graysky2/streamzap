@@ -25,6 +25,7 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 #### For XBMC
 * Place Lirc.xml into ~/.xbmc/userdata
 * Place remote.xml into ~/.xbmc/userdata/keymaps
+* Place audio_switch.py in ~/xbmc/bin (note you likely need to edit the code to match your system, see the thread in the comments).
 
 ##### XBMC Files and Formats
 * Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
