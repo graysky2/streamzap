@@ -74,11 +74,11 @@
       <recordedtv>XBMC.ActivateWindowAndFocus(MyPVR, 34,0, 13,0)</recordedtv>
       <epgsearch>XBMC.ActivateWindowAndFocus(MyPVR, 35,0, 14,0)</epgsearch>
 			<!-- red button = title -->
-			<title>XBMC.CleanLibrary(Video)</title>
+			<title>XBMC.UpdateLibrary(video)</title>
 			<!-- green button = info -->
-			<green>RunScript("/var/lib/xbmc/bin/audio_switch.py")</green>
+			<green>XBMC.ActivateWindow(MyVideos)</green>
 			<!-- yellow button = display -->
-			<display>XBMC.UpdateLibrary(video)</display>
+			<display>RunScript("/var/lib/xbmc/bin/audio_switch.py")</display>
 			<!-- blue button = blue -->
 			<blue>ShowSubtitles</blue>
       <zero>Number0</zero>
