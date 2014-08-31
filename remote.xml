@@ -47,7 +47,7 @@
       <up>Up</up>
       <down>Down</down>
       <select>Select</select>
-      <enter>FullScreen</enter> 
+      <enter>FullScreen</enter>
       <pageplus>PageUp</pageplus>
       <pageminus>PageDown</pageminus>
       <back>Back</back>
@@ -62,7 +62,8 @@
       <volumeplus>VolumeUp</volumeplus>
       <volumeminus>VolumeDown</volumeminus>
       <mute>Mute</mute>
-      <power>ActivateWindow(shutdownmenu)</power>
+      <!--- <power>ActivateWindow(shutdownmenu)</power> -->
+      <power>XBMC.ShutDown()</power>
       <myvideo>XBMC.ActivateWindow(MyVideos)</myvideo>
       <mymusic>XBMC.ActivateWindow(MyMusic)</mymusic>
       <mypictures>XBMC.ActivateWindow(MyPictures)</mypictures>
