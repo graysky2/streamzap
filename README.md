@@ -23,9 +23,9 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For XBMC
-* Place Lirc.xml into ~/.xbmc/userdata
-* Place remote.xml into ~/.xbmc/userdata/keymaps
-* Place audio_switch.py in ~/xbmc/bin (note you likely need to edit the code to match your system, see the thread in the comments).
+* Place Lirc.xml into ~/.kodi/userdata
+* Place remote.xml into ~/.kodi/userdata/keymaps
+* Place audio_switch.py in ~/bin (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
 
 ##### XBMC Files and Formats

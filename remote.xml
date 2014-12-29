@@ -78,7 +78,7 @@
       <!-- green button = info -->
       <green>XBMC.ActivateWindow(MyVideos)</green>
       <!-- yellow button = display -->
-      <display>RunScript("/var/lib/xbmc/bin/audio_switch.py")</display>
+      <display>RunScript("/var/lib/kodi/bin/audio_switch.py")</display>
       <!-- blue button = blue -->
       <blue>ShowSubtitles</blue>
       <zero>Number0</zero>
