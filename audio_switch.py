@@ -12,12 +12,15 @@ print(xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.GetSettingValue",
 
 if not os.path.isfile(tempfile0):
 	# pulseaudio analog out
-		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"alsa_output.pci-0000_00_1b.0.analog-stereo"}, "id":1}')
+		#xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"alsa_output.pci-0000_00_1b.0.analog-stereo"}, "id":1}')
+		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"@:CARD=PCH,DEV=0"}, "id":1}')
 		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"Soundbar", "image":"/var/lib/kodi/glossy-speaker-icon.png"}, "id":1}')
 		file = open(tempfile0, "a")
 		file.close()
 else:
 	# pulseaudio HDMI out
-		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1"}, "id":1}')
+		#xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1"}, "id":1}')
+		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"hdmi:CARD=HDMI,DEV=1"}, "id":1}')
 		xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"TV Speakers", "image":"/var/lib/kodi/hdtv.png"}, "id":1}')
 		os.remove(tempfile0)
+
