@@ -1,11 +1,11 @@
 ##Streamzap
 Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial and does NOT require the use of [LIRC](http://www.lirc.org) any more although LIRC does provide the ability to map the same keypress to different actions under a variety of applications.
 
-The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, xbmc, and mplayer.
+The repo contains several config files that work with [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel as well as files to allow operation with LIRC, specifically for mythtv, kodi, and mplayer.
 
-## Option #1 - Full featured operation of mplayer, mythtv, and xbmc using LIRC.
+## Option #1 - Full featured operation of mplayer, mythtv, and kodi using LIRC.
 ### Setup LIRC
-* Install lirc and/or lirc-utils for your distro.  For Arch, only lirc-utils is required.
+* Install lirc-utils for your distro.
 * Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
 * Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
 * Restart X if you just did the aforementioned step for the first time.
@@ -22,17 +22,17 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * Place .lircrc into your homedir.
 * For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
-#### For XBMC
+#### For Kodi
 * Place Lirc.xml into ~/.kodi/userdata
 * Place remote.xml into ~/.kodi/userdata/keymaps
 * Place audio_switch.py in ~/bin (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
 
-##### XBMC Files and Formats
-* Lircmap.xml - Maps xbmc_buttons to LIRC_buttons.  (`<xbmc_button>LIRC_button</xbmc_button>`)
-* remote.xml - Maps xbmc_buttons to xbmc_actions.  (`<xbmc_button>action</xbmc_button>`)
+##### Kodi Files and Formats
+* Lircmap.xml - Maps kodi_buttons to LIRC_buttons.  (`<kodi_button>LIRC_button</kodi_button>`)
+* remote.xml - Maps kodi_buttons to kodi_actions.  (`<kodi_button>action</kodi_button>`)
 
-The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
+The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
 
 ### Supplemental Info
 #### Mplayer Links
@@ -40,10 +40,10 @@ The two together allow for: LIRC_buttons <--> xbmc_buttons <--> xbmc_actions.
 * `mplayer -input keylist`
 * `mplayer -input cmdlist`
 
-#### XBMC Upstream Links
+#### Kodi Upstream Links
 * [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
 * [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xml)
-* [List of built-in function](http://wiki.xbmc.org/index.php?title=List_of_built-in_functions)
+* [List of built-in function](http://kodi.wiki/view/List_of_built-in_functions)
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
@@ -84,5 +84,5 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
 
 #### Show Availble Button Names
-The lrc-utils package is likely required.  Execute `irrecord -l` to see a list of all available button names.
+The lirc-utils package is likely required.  Execute `irrecord -l` to see a list of all available button names.
 
