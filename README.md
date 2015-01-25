@@ -6,12 +6,12 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 ## Option #1 - Full featured operation of mplayer, mythtv, and kodi using LIRC.
 ### Setup LIRC
 * Install lirc for your distro.
-* Place lircd.conf.streamzap-new in /etc/lirc renaming it to lircd.conf 
+* Place lircd.conf.streamzap-new in /etc/lirc/lircd.conf.d renaming it to streamzap.conf
 * Place 90-streamzap.conf in /etc/X11/xorg.conf.d which causes X to ignore the remote without LIRC.  This step is required.
 * Restart X if you just did the aforementioned step for the first time.
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
-If the included lircd.conf does not work for you, consider generating your own with irrecord.
+If the included streamzap.conf does not work for you, consider generating your own with irrecord.
 ```
 irrecord --device=/dev/lirc0 streamzap
 ```
