@@ -17,14 +17,14 @@ irrecord --device=/dev/lirc0 streamzap
 Follow the included instructions.  It is doubtful that the actual scancodes have changed, so you can likely just copy that section into the new file.
 
 #### For mythtv and mplayer
-* Place the .lirc dir from this repo into your homedir.
-* Place .lircrc into your homedir.
-* For mythtv only, create a symlink in your ~/.mythtv to ~/.lirc/mythtv `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
+* Place the `.lirc` dir from this repo into your homedir.
+* Place `.lircrc` into your homedir.
+* For mythtv only, create a symlink in your `~/.mythtv` to `~/.lirc/mythtv` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For Kodi
-* Place Lirc.xml into ~/.kodi/userdata
-* Place remote.xml into ~/.kodi/userdata/keymaps
-* Place audio_switch.py in ~/bin (note you likely need to edit the code to match your system, see the thread in the comments).
+* Place `Lirc.xml` into `~/.kodi/userdata`
+* Place `remote.xml` into `~/.kodi/userdata/keymaps`
+* Place `audio_switch.py` in `~/bin` (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
 
 ##### Kodi Files and Formats
@@ -46,7 +46,7 @@ The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
 * Install the v4l-util package (your distro provides this in all likelyhood).
-* Modify /etc/rc_maps.cfg so the streamzap line points to /etc/rc_keymaps/streamzap.local
+* Modify `/etc/rc_maps.cfg` so the streamzap line points to `/etc/rc_keymaps/streamzap.local`
 ```
 --- a/etc/rc_maps.cfg	2013-10-08 18:10:04.478595923 -0400
 +++ b/etc/rc_maps.cfg	2013-10-08 16:19:34.150994862 -0400
@@ -61,7 +61,7 @@ The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
  *	rc-gadmei-rm008z         gadmei_rm008z
 ```
 
-* streamzap.local should be installed to /etc/rc_keymaps
+* `streamzap.local` should be installed to `/etc/rc_keymaps`
 
 ### Supplemental Info
 #### Syntax of /etc/rc_keymaps/streamzap.local
