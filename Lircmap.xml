@@ -1,7 +1,7 @@
-<!-- ~/.xbmc/userdata/Lircmap.xml                                                 -->
+<!-- ~/.kodi/userdata/Lircmap.xml                                                 -->
 <!--                                                                              -->
 <!-- This file maps XBMC_buttons to LIRC_buttons                                  -->
-<!-- and is works with a custom ~/.xbmc/userdata/remote.xml which maps            -->
+<!-- and is works with a custom ~/.kodi/userdata/remote.xml which maps            -->
 <!-- XBMC_buttons to actions                                                      -->
 <!--                                                                              -->
 <!-- How to add remotes                                                           -->
