@@ -6,9 +6,9 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 ## Option #1 - Full featured operation of mplayer, mythtv, and kodi using LIRC.
 ### Setup LIRC
 * Install lirc for your distro.
-* Place `streamzap.conf` in `/etc/lirc/lircd.conf.d`
-* If using Xorg, place `90-streamzap.conf` in `/etc/X11/xorg.conf.d` to keep the remote from being seen as a keyboard and doubling key presses.
-* If using an ARM device such as a Raspberry Pi, the `90-streamzap.conf` method will not works since these devices do not use Xorg. Instead, place `streamzap-blacklist.conf` in `/etc/modprobed.d` to surpress this behavior.
+* Place `streamzap.conf` in `/etc/lirc/lircd.conf.d/`
+* If using Xorg, place `90-streamzap.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard and doubling key presses.
+* If using an ARM device such as a Raspberry Pi, the `90-streamzap.conf` method will not works since these devices do not use Xorg. Instead, place `streamzap-blacklist.conf` in `/etc/modprobed.d/` to surpress this behavior.
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
 If the included streamzap.conf does not work for you, consider generating your own with irrecord.
@@ -23,9 +23,9 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * For mythtv only, create a symlink in your `~/.mythtv` to `~/.lirc/mythtv` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For Kodi
-* Place `Lirc.xml` into `~/.kodi/userdata`
-* Place `remote.xml` into `~/.kodi/userdata/keymaps`
-* Place `audio_switch.py` in `~/bin` (note you likely need to edit the code to match your system, see the thread in the comments).
+* Place `Lirc.xml` into `~/.kodi/userdata/`
+* Place `remote.xml` into `~/.kodi/userdata/keymaps/`
+* Place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
 
 ##### Kodi Files and Formats
@@ -62,7 +62,7 @@ The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
  *	rc-gadmei-rm008z         gadmei_rm008z
 ```
 
-* `streamzap.local` should be installed to `/etc/rc_keymaps`
+* `streamzap.local` should be installed to `/etc/rc_keymaps/`
 
 ### Supplemental Info
 #### Syntax of /etc/rc_keymaps/streamzap.local
