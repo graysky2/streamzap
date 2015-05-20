@@ -20,7 +20,7 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 #### For mythtv and mplayer
 * Place the `.lirc` dir from this repo into your homedir.
 * Place `.lircrc` into your homedir.
-* For mythtv only, create a symlink in your `~/.mythtv` to `~/.lirc/mythtv` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
+* For mythtv only, create a symlink in your `~/.mythtv/` to `~/.lirc/mythtv/` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For Kodi
 * Place `Lirc.xml` into `~/.kodi/userdata/`
