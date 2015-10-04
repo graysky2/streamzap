@@ -23,7 +23,7 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * For mythtv only, create a symlink in your `~/.mythtv/` to `~/.lirc/mythtv/` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For Kodi
-* Place `Lirc.xml` into `~/.kodi/userdata/`
+* Place `Lircmap.xml` into `~/.kodi/userdata/`
 * Place `remote.xml` into `~/.kodi/userdata/keymaps/`
 * Place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
