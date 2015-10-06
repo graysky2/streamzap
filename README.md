@@ -24,8 +24,8 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 
 #### For Kodi
 * Place `Lircmap.xml` into `~/.kodi/userdata/`
-* Place `remote.xml` into `~/.kodi/userdata/keymaps/`
-* Place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
+* Optionally place `remote.xml` into `~/.kodi/userdata/keymaps/`
+* Optionally place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggestoned icons are included. Place them in ~ as shown in the script.
 
 ##### Kodi Files and Formats
