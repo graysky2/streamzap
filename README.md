@@ -8,7 +8,22 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 * Install lirc for your distro.
 * Place `00-streamzap.conf` in `/etc/lirc/lircd.conf.d/`
 * If using Xorg, place `90-streamzap-disable.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard and doubling key presses.
-* If using an ARM device such as a Raspberry Pi, the `90-streamzap-disable.conf` method will not works since these devices do not use Xorg. Instead, place `streamzap-blacklist.conf` in `/etc/modprobed.d/` to surpress this behavior.
+* If using an ARM device such as a Raspberry Pi, the `90-streamzap-disable.conf` method will not work since these devices do not use Xorg. Instead, blacklist the offending modules by creating `/etc/modprobed.d/streamzap.conf`` to suppress this behavior.
+```
+#
+# /etc/modprobed.d/streamzap.conf
+# 
+
+install ir_sharp_decoder /bin/false
+install ir_xmp_decoder /bin/false
+install ir_rc5_decoder /bin/false
+install ir_nec_decoder /bin/false
+install ir_sony_decoder /bin/false
+install ir_mce_kbd_decoder /bin/false
+install ir_jvc_decoder /bin/false
+install ir_rc6_decoder /bin/false
+install ir_sanyo_decoder /bin/false
+```
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
 If the included 00-streamzap.conf does not work for you, consider generating your own with irrecord.
@@ -26,7 +41,7 @@ Follow the included instructions.  It is doubtful that the actual scancodes have
 * Place `Lircmap.xml` into `~/.kodi/userdata/`
 * Optionally place `remote.xml` into `~/.kodi/userdata/keymaps/`
 * Optionally place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
-* Two suggestoned icons are included. Place them in ~ as shown in the script.
+* Two suggested icons are included. Place them in ~ as shown in the script.
 
 ##### Kodi Files and Formats
 * Lircmap.xml - Maps kodi_buttons to LIRC_buttons.  (`<kodi_button>LIRC_button</kodi_button>`)
@@ -46,7 +61,7 @@ The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
 * [List of built-in function](http://kodi.wiki/view/List_of_built-in_functions)
 
 ## Option #2 - Basic operation of mplayer using only the v4l-utils package.
-* Install the v4l-util package (your distro provides this in all likelyhood).
+* Install the v4l-util package (your distro provides this in all likelihood).
 * Modify `/etc/rc_maps.cfg` so the streamzap line points to `/etc/rc_keymaps/streamzap.local`
 ```
 --- a/etc/rc_maps.cfg	2013-10-08 18:10:04.478595923 -0400
@@ -83,6 +98,6 @@ Found /sys/class/rc/rc0/ (/dev/input/event3) with:
 
 Execute `ir-keytable --read --device=/dev/input/PATH` where PATH is what the previous command outputted (event3 in the example above).
 
-#### Show Availble Button Names
+#### Show Available Button Names
 The lirc package is likely required.  Execute `irrecord -l` to see a list of all available button names.
 
