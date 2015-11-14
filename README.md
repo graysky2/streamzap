@@ -8,22 +8,7 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 * Install lirc for your distro.
 * Place `00-streamzap.conf` in `/etc/lirc/lircd.conf.d/`
 * If using Xorg, place `90-streamzap-disable.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard and doubling key presses.
-* If using an ARM device such as a Raspberry Pi, the `90-streamzap-disable.conf` method will not work since these devices do not use Xorg. Instead, blacklist the offending modules by creating `/etc/modprobed.d/streamzap.conf` to suppress this behavior.
-```
-#
-# /etc/modprobed.d/streamzap.conf
-# 
-
-install ir_sharp_decoder /bin/false
-install ir_xmp_decoder /bin/false
-install ir_rc5_decoder /bin/false
-install ir_nec_decoder /bin/false
-install ir_sony_decoder /bin/false
-install ir_mce_kbd_decoder /bin/false
-install ir_jvc_decoder /bin/false
-install ir_rc6_decoder /bin/false
-install ir_sanyo_decoder /bin/false
-```
+* If using an ARM device such as a Raspberry Pi, the `90-streamzap-disable.conf` method will not work since these devices do not use Xorg. Instead, blacklist the offending modules by placing `streamzap-blacklist.conf` in `/etc/modprobe.d/` to suppress this behavior.
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
 If the included 00-streamzap.conf does not work for you, consider generating your own with irrecord.
