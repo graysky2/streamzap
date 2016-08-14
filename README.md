@@ -6,7 +6,7 @@ The repo contains several config files that work with [v4l-utils](http://git.lin
 ## Option #1 - Full featured operation of mplayer, mythtv, and kodi using LIRC.
 ### Setup LIRC
 * Install lirc for your distro.
-* Place `00-streamzap-20160813.conf` in `/etc/lirc/lircd.conf.d/` (note this was regenerated using lirc 0.9.4.b to prevent some key doubling observed with the original file still kept here named `00streamzap.conf`).
+* Place `00-Streamzap_PC_Remote.conf` in `/etc/lirc/lircd.conf.d/` (note this was regenerated using lirc 0.9.4.b to prevent some [key doubling](https://sourceforge.net/p/lirc/tickets/219/) observed with the original file).
 * If using Xorg, place `90-streamzap-disable.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard and doubling key presses.
 * If using an ARM device such as a Raspberry Pi, the `90-streamzap-disable.conf` method will not work since these devices do not use Xorg. Instead, blacklist the offending modules by placing `streamzap-blacklist.conf` in `/etc/modprobe.d/` to suppress this behavior.
 * With the release of lirc v0.9.4a (June of 2016), users need to edit upstream's provided `/etc/lirc/lirc_options.conf` with these changes:
@@ -16,9 +16,9 @@ device          = /dev/lirc0
 ```
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
-If the included 00-streamzap.conf does not work for you, consider generating your own with irrecord.
+If the included conf does not work for you, consider generating your own with irrecord.
 ```
-irrecord --device=/dev/lirc0 streamzap
+irrecord --device=/dev/lirc0 streamzap --driver default
 ```
 Follow the included instructions.  It is doubtful that the actual scancodes have changed, so you can likely just copy that section into the new file.
 
