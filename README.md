@@ -1,5 +1,6 @@
 ##Streamzap
 ![remote](https://s19.postimg.org/d8bysb1tf/image.jpg)
+
 Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial.  The recommended method is to use [LIRC](http://www.lirc.org) as it provides the ability to map the same keypress to different actions under a variety of applications.  Alternatively, [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel works too but can be less flexible.
 
 The repo contains instructions and files to allow operation with LIRC or v4l-utils and also gives specific config files for mythtv, kodi, and mplayer.
