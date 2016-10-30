@@ -28,8 +28,11 @@
     <back>KEY_EXIT</back>
     <menu>KEY_MENU</menu>
     <title>KEY_RED</title>
+    <red>KEY_RED</red>
     <info>KEY_GREEN</info>
+    <green>KEY_GREEN</green>
     <display>KEY_YELLOW</display>
+    <yellow>KEY_YELLOW</yellow>
     <blue>KEY_BLUE</blue>
     <skipplus>KEY_NEXT</skipplus>
     <skipminus>KEY_PREVIOUS</skipminus>
