@@ -19,6 +19,8 @@
 <!-- This is different from a "noop" action, which disables a button.                     -->
 <!--                                                                                      -->
 <!-- More documentation on keymaps can be found on http://kodi.wiki/view/keymaps          -->
+<!--                                                                                      -->
+<!-- This version modified by graysky (https://github.com/graysky2/streamzap)             -->
 <keymap>
   <global>
     <remote>
@@ -32,7 +34,7 @@
       <up>Up</up>
       <down>Down</down>
       <select>Select</select>
-      <enter>FullScreen</enter> 
+      <enter>FullScreen</enter>
       <pageplus>PageUp</pageplus>
       <pageminus>PageDown</pageminus>
       <back>Back</back>
@@ -45,7 +47,7 @@
       <skipminus>SkipPrevious</skipminus>
       <display>FullScreen</display>
       <start>PreviousMenu</start>
-      <record>Record</record>
+      <record>Play</record>
       <eject>EjectTray()</eject>
       <volumeplus>VolumeUp</volumeplus>
       <volumeminus>VolumeDown</volumeminus>
@@ -60,10 +62,10 @@
       <liveradio>ActivateWindow(RadioChannels)</liveradio>
       <recordedtv>ActivateWindow(TVRecordings)</recordedtv>
       <epgsearch>ActivateWindow(TVSearch)</epgsearch>
-      <red>ActivateWindow(TVChannels)</red>
+      <red>PlayerProcessInfo</red>
       <green>ActivateWindow(Videos)</green>
-      <yellow>ActivateWindow(Music)</yellow>
-      <blue>ActivateWindow(Pictures)</blue>
+      <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow>
+      <blue>ShowSubtitles</blue>
       <zero>Number0</zero>
       <one>Number1</one>
       <two>JumpSMS2</two>
@@ -79,6 +81,10 @@
   </global>
   <Home>
     <remote>
+      <red>ActivateWindow(SystemInfo)</red>
+      <green>ActivateWindow(Videos)</green>
+      <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow>
+      <blue>ActivateWindow(Weather)</blue>
       <clear>ActivateWindow(Weather)</clear>
       <hash>ActivateWindow(Settings)</hash>
     </remote>
@@ -183,12 +189,16 @@
       <right>StepForward</right>
       <up>ChapterOrBigStepForward</up>
       <down>ChapterOrBigStepBack</down>
-      <back>Back</back>
+      <back>Stop</back>
       <menu>OSD</menu>
       <contentsmenu>OSD</contentsmenu>
       <rootmenu>OSD</rootmenu>
       <start>OSD</start>
-      <select>OSD</select>
+      <select>PlayPause</select>
+      <record>audiodelay</record>
+      <red>PlayerProcessInfo</red>
+      <green>Info</green>
+      <blue>NextSubtitle</blue>
       <title>PlayerProcessInfo</title>
       <info>Info</info>
       <guide>ActivateWindow(PVROSDGuide)</guide>
@@ -211,6 +221,7 @@
   <FullscreenInfo>
     <remote>
       <title>PlayerProcessInfo</title>
+      <green>Back</green>
       <info>Back</info>
       <menu>OSD</menu>
       <contentsmenu>OSD</contentsmenu>
