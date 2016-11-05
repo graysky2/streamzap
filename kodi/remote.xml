@@ -64,6 +64,9 @@
       <epgsearch>ActivateWindow(TVSearch)</epgsearch>
       <red>PlayerProcessInfo</red>
       <green>ActivateWindow(Videos)</green>
+      <!-- uncomment the line for yellow if not using audio_switch.py -->
+      <!-- and be sure to comment or delete the mapping for audio_switch.py -->
+      <!-- <yellow>ActivateScreensaver</yellow> -->
       <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow>
       <blue>ShowSubtitles</blue>
       <zero>Number0</zero>
@@ -82,11 +85,10 @@
   <Home>
     <remote>
       <red>ActivateWindow(SystemInfo)</red>
-      <green>ActivateWindow(Videos)</green>
-      <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow>
       <blue>ActivateWindow(Weather)</blue>
       <clear>ActivateWindow(Weather)</clear>
       <hash>ActivateWindow(Settings)</hash>
+      <display>ActivateScreensaver</display>
     </remote>
   </Home>
   <TVRecordings>
@@ -210,6 +212,9 @@
       <hash>AudioNextLanguage</hash>
       <pageplus>SkipNext</pageplus>
       <pageminus>SkipPrevious</pageminus>
+      <!-- uncomment the line for yellow if not using audio_switch.py -->
+      <!-- <yellow>AspectRatio</yellow> -->
+      <display>AspectRatio</display>
     </remote>
   </FullscreenVideo>
   <VideoTimeSeek>

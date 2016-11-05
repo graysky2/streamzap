@@ -27,11 +27,8 @@
     <select>KEY_OK</select>
     <back>KEY_EXIT</back>
     <menu>KEY_MENU</menu>
-    <title>KEY_RED</title>
     <red>KEY_RED</red>
-    <info>KEY_GREEN</info>
     <green>KEY_GREEN</green>
-    <display>KEY_YELLOW</display>
     <yellow>KEY_YELLOW</yellow>
     <blue>KEY_BLUE</blue>
     <skipplus>KEY_NEXT</skipplus>
@@ -51,5 +48,8 @@
     <eight>KEY_8</eight>
     <nine>KEY_9</nine>
     <zero>KEY_0</zero>
+    <display>KEY_DISPLAYTOGGLE</display>
+    <title>KEY_ZOOM</title>
+    <info>KEY_HELP</info>
   </remote>
 </lircmap>
