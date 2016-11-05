@@ -20,9 +20,9 @@ device          = /dev/lirc0
 
 If the included conf does not work for you, consider generating your own with irrecord.
 ```
-irrecord --device=/dev/lirc0 streamzap --driver default
+irrecord --device=/dev/lirc0 --driver default myremotename
 ```
-Follow the included instructions.
+Follow the instructions.
 
 #### For mythtv and mplayer
 * Place the `.lirc` dir from this repo into your homedir.
@@ -30,9 +30,9 @@ Follow the included instructions.
 * For mythtv only, create a symlink in your `~/.mythtv/` to `~/.lirc/mythtv/` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For kodi
-* Place `Lircmap.xml` into `~/.kodi/userdata/`
-* Optionally place `remote.xml` into `~/.kodi/userdata/keymaps/`
-* Optionally place `audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
+* Place `kodi/Lircmap.xml` into `~/.kodi/userdata/`
+* Optionally place `kodi/remote.xml` into `~/.kodi/userdata/keymaps/`
+* Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
 * Two suggested icons are included. Place them in ~ as shown in the script.
 
 ##### Kodi files and formats
