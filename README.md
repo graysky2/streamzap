@@ -1,14 +1,14 @@
 ##Streamzap
 ![remote](https://s19.postimg.org/d8bysb1tf/image.jpg)
 
-Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is currently trivial.  The recommended method is to use [LIRC](http://www.lirc.org) as it provides the ability to map the same keypress to different actions under a variety of applications.  Alternatively, [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel works too but can be less flexible.
+Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is very easy.  The recommended method is to use [LIRC](http://www.lirc.org) as it provides the ability to map the same keypress to different actions under a variety of applications.  Alternatively, [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel works too but is less flexible.
 
-The repo contains instructions and files to allow operation with LIRC or v4l-utils and also gives specific config files for mythtv, kodi, and mplayer.
+This repo contains instructions and files to allow operation with LIRC or v4l-utils and also gives specific config files for mythtv, kodi, and mplayer.  Use only one of the two options presented.
 
-## Option #1 - Full featured operation of mplayer, mythtv, and kodi using LIRC.
+## Option #1 - Full featured operation of mplayer, mythtv, and kodi (and others) using LIRC.
 ### Setup LIRC
 * Install lirc for your distro.
-* Place `00-Streamzap_PC_Remote.conf` in `/etc/lirc/lircd.conf.d/` (note this was regenerated using lirc 0.9.4.b to prevent some [key doubling](https://sourceforge.net/p/lirc/tickets/219/) observed with the original file).
+* Place `00-Streamzap_PC_Remote.conf` in `/etc/lirc/lircd.conf.d/` (note this was regenerated using lirc 0.9.4b to prevent some [key doubling](https://sourceforge.net/p/lirc/tickets/219/) observed with the original file).
 * If using Xorg, place `90-streamzap-disable.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard.
 * If not using Xorg (for example on some ARM devices such as a Raspberry Pi), blacklist the offending modules by placing `streamzap-blacklist.conf` in `/etc/modprobe.d/` to suppress this behavior.
 * With the release of lirc v0.9.4a (June of 2016), users need to edit upstream's provided `/etc/lirc/lirc_options.conf` with these changes:
@@ -18,28 +18,16 @@ device          = /dev/lirc0
 ```
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 
-If the included conf does not work for you, consider generating your own with irrecord.
-```
-irrecord --device=/dev/lirc0 --driver default myremotename
-```
-Follow the instructions.
-
 #### For mythtv and mplayer
-* Place the `.lirc` dir from this repo into your homedir.
+* Place `.lirc/` into your homedir.
 * Place `.lircrc` into your homedir.
-* For mythtv only, create a symlink in your `~/.mythtv/` to `~/.lirc/mythtv/` `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
+* For mythtv only, create this symlink: `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
 
 #### For kodi
 * Place `kodi/Lircmap.xml` into `~/.kodi/userdata/`
 * Optionally place `kodi/remote.xml` into `~/.kodi/userdata/keymaps/`
-* Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments).
-* Two suggested icons are included. Place them in ~ as shown in the script.
-
-##### Kodi files and formats
-* Lircmap.xml - Maps kodi_buttons to LIRC_buttons.  (`<kodi_button>LIRC_button</kodi_button>`)
-* remote.xml - Maps kodi_buttons to kodi_actions.  (`<kodi_button>action</kodi_button>`)
-
-The two together allow for: LIRC_buttons <--> kodi_buttons <--> kodi_actions.
+* Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments of the file).
+* Optionally place the two suggested icons into `~` as shown in the script.
 
 ### Supplemental info
 #### Mplayer links
