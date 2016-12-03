@@ -210,8 +210,8 @@
       <language>AudioNextLanguage</language>
       <playlist>Playlist</playlist>
       <hash>AudioNextLanguage</hash>
-      <pageplus>SkipNext</pageplus>
-      <pageminus>SkipPrevious</pageminus>
+      <pageplus>AudioDelayPlus</pageplus>
+      <pageminus>AudioDelayMinus</pageminus>
       <!-- uncomment the line for yellow if not using audio_switch.py -->
       <!-- <yellow>AspectRatio</yellow> -->
       <display>AspectRatio</display>
