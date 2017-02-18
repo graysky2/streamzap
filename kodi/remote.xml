@@ -41,7 +41,7 @@
       <menu>ContextMenu</menu>
       <contentsmenu>PreviousMenu</contentsmenu>
       <rootmenu>PreviousMenu</rootmenu>
-      <title>ContextMenu</title>
+      <title>ToggleWatched</title>
       <info>Info</info>
       <skipplus>SkipNext</skipplus>
       <skipminus>SkipPrevious</skipminus>
@@ -69,6 +69,7 @@
       <!-- <yellow>ActivateScreensaver</yellow> -->
       <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow>
       <blue>ShowSubtitles</blue>
+      <display>Playlist</display>
       <zero>Number0</zero>
       <one>Number1</one>
       <two>JumpSMS2</two>
