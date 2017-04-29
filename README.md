@@ -1,4 +1,4 @@
-##Streamzap
+## Streamzap
 ![remote](https://s19.postimg.org/d8bysb1tf/image.jpg)
 
 Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work under Linux is very easy.  The recommended method is to use [LIRC](http://www.lirc.org) as it provides the ability to map the same keypress to different actions under a variety of applications.  Alternatively, [v4l-utils](http://git.linuxtv.org/v4l-utils.git) and any modern Linux kernel works too but is less flexible.
