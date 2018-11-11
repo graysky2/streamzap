@@ -179,9 +179,13 @@
   <FullscreenVideo>
     <remote>
       <zero>Number0</zero>
-      <one>Number1</one>
+      <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio) -->
+      <!-- You have to enable video sync for this to have any effect -->
+      <one>PlayerControl(tempodown)</one>
       <two>Number2</two>
-      <three>Number3</three>
+      <!-- Hitting "3" speeds up to a max of 1.5x video play back (video+audio) -->
+      <!-- You have to enable video sync for this to have any effect -->
+      <three>PlayerControl(tempoup)</three>
       <four>Number4</four>
       <five>Number5</five>
       <six>Number6</six>
