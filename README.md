@@ -21,7 +21,7 @@ device          = /dev/lirc0
 #### For mythtv and mplayer
 * Place `.lirc/` into your homedir.
 * Place `.lircrc` into your homedir.
-* For mythtv only, create this symlink: `ln -s ~/.lirc/mythtv ~/.mythtv/mythtv`
+* For mythtv only, create this symlink: `ln -s ~/.lirc/mythtv ~/.mythtv/lircrc`
 
 #### For kodi
 * Place `kodi/Lircmap.xml` into `~/.kodi/userdata/`
