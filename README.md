@@ -7,7 +7,7 @@ This repo contains instructions and files to allow operation with LIRC or v4l-ut
 
 ## Option #1 - Full featured operation of mplayer, mythtv, and kodi (and others) using LIRC.
 ### Setup LIRC
-* Install lirc for your distro.
+* Install lirc for your distro. Note that by default, `lircd` runs as root user. However, for increased stability and security, upstream recommends running it as an unprivileged user.  See [Appendix 14](http://www.lirc.org/html/configuration-guide.html) and/or [this](https://wiki.archlinux.org/index.php/LIRC#Running_as_a_regular_user_rather_than_as_root) Arch Wiki page for that setup.
 * Place `00-Streamzap_PC_Remote.conf` in `/etc/lirc/lircd.conf.d/` (note this was regenerated using lirc 0.9.4b to prevent some [key doubling](https://sourceforge.net/p/lirc/tickets/219/) observed with the original file).
 * If using Xorg, place `90-streamzap-disable.conf` in `/etc/X11/xorg.conf.d/` to keep the remote from being seen as a keyboard.
 * If not using Xorg (for example on some ARM devices such as a Raspberry Pi), blacklist the offending modules by placing `streamzap-blacklist.conf` in `/etc/modprobe.d/` to suppress this behavior.
