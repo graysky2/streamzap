@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This file contains the mapping of remote keys to actions within Kodi.                -->
-<!--                                                                                      -->
-<!-- The format is:                                                                       -->
-<!--  <window>                                                                            -->
-<!--    <device>                                                                          -->
-<!--      <button>action</button>                                                         -->
-<!--    </device>                                                                         -->
-<!--  </window>                                                                           -->
-<!--                                                                                      -->
-<!-- The <global> section is a fall through - they will only be used if the button is     -->
-<!-- not used in the current window's section.                                            -->
-<!--                                                                                      -->
-<!-- Actions can be built-in functions.                                                   -->
-<!--  eg <B>ActivateWindow(Music)</B>                                                     -->
-<!-- would automatically go to Music on the press of the B button.                        -->
-<!--                                                                                      -->
-<!-- An empty action removes the corresponding mapping from default and parent keymaps.   -->
-<!-- This is different from a "noop" action, which disables a button.                     -->
-<!--                                                                                      -->
-<!-- More documentation on keymaps can be found on http://kodi.wiki/view/keymaps          -->
-<!--                                                                                      -->
-<!-- This version modified by graysky (https://github.com/graysky2/streamzap)             -->
+<!-- This file contains the mapping of remote keys to actions within Kodi.
+The format is:
+ <window>
+   <device>
+     <button>action</button>
+   </device>
+ </window>
+
+The <global> section is a fall through - they will only be used if the button is
+not used in the current window's section.
+
+Actions can be built-in functions.
+ eg <B>ActivateWindow(Music)</B>
+would automatically go to Music on the press of the B button.
+
+An empty action removes the corresponding mapping from default and parent keymaps.
+This is different from a "noop" action, which disables a button.
+
+More documentation on keymaps can be found on http://kodi.wiki/view/keymaps
+
+This version modified by graysky (https://github.com/graysky2/streamzap) -->
 <keymap>
   <global>
     <remote>
@@ -64,9 +63,9 @@
       <epgsearch>ActivateWindow(TVSearch)</epgsearch>
       <red>PlayerProcessInfo</red>
       <green>ActivateWindow(Videos)</green>
-      <!-- uncomment the below yellow to use audio_switch.py -->
-      <!-- and be sure you comment the default one to activate the screensaver -->
-      <!-- <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow> -->
+      <!-- uncomment the below yellow to use audio_switch.py
+      and be sure you comment the default one to activate the screensaver
+      <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow> -->
       <yellow>ActivateScreensaver</yellow>
       <blue>ShowSubtitles</blue>
       <display>Playlist</display>
@@ -179,12 +178,12 @@
   <FullscreenVideo>
     <remote>
       <zero>Number0</zero>
-      <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio) -->
-      <!-- You have to enable video sync for this to have any effect -->
+      <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio)
+      You have to enable video sync for this to have any effect -->
       <one>PlayerControl(tempodown)</one>
       <two>Number2</two>
-      <!-- Hitting "3" speeds up to a max of 1.5x video play back (video+audio) -->
-      <!-- You have to enable video sync for this to have any effect -->
+      <!-- Hitting "3" speeds up to a max of 1.5x video play back (video+audio)
+      You have to enable video sync for this to have any effect -->
       <three>PlayerControl(tempoup)</three>
       <four>Number4</four>
       <five>Number5</five>
@@ -217,8 +216,8 @@
       <hash>AudioNextLanguage</hash>
       <pageplus>AudioDelayPlus</pageplus>
       <pageminus>AudioDelayMinus</pageminus>
-      <!-- comment the following if NOT using audio_switch.py -->
-      <!-- <yellow>AspectRatio</yellow> -->
+      <!-- comment the following if NOT using audio_switch.py
+      <yellow>AspectRatio</yellow> -->
       <display>AspectRatio</display>
     </remote>
   </FullscreenVideo>

@@ -1,14 +1,14 @@
-<!-- ~/.kodi/userdata/Lircmap.xml                                                 -->
-<!--                                                                              -->
-<!-- This file maps XBMC_buttons to LIRC_buttons                                  -->
-<!-- and is works with a custom ~/.kodi/userdata/remote.xml which maps            -->
-<!-- XBMC_buttons to actions                                                      -->
-<!--                                                                              -->
-<!-- How to add remotes                                                           -->
-<!-- <remote device="name_Lirc_calls_the_remote">                                 -->
-<!--                                                                              -->
-<!-- For the commands the layout following layout is used                         -->
-<!-- <XBMC_button>LIRC_button</XBMC_button>                                       -->
+<!-- ~/.kodi/userdata/Lircmap.xml
+
+This file maps XBMC_buttons to LIRC_buttons
+and is works with a custom ~/.kodi/userdata/remote.xml which maps
+XBMC_buttons to actions
+
+How to add remotes
+<remote device="name_Lirc_calls_the_remote">
+
+For the commands the layout following layout is used
+<XBMC_button>LIRC_button</XBMC_button> -->
 
 <lircmap>
   <remote device="Streamzap_PC_Remote">
