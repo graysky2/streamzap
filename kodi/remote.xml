@@ -24,6 +24,11 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
   <global>
     <remote>
       <play>PlayPause</play>
+      <!-- Optionally redefine the pause key to send a "stop" which is useful
+      if using multiple kodi nodes and you want to resume where left off on
+      any node.  Also useful if you want your screensaver to turn on which it
+      will not if the video is paused but it will if stopped.
+      <pause>Stop</pause> -->
       <pause>Pause</pause>
       <stop>Stop</stop>
       <forward>FastForward</forward>
