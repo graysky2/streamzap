@@ -24,11 +24,10 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
   <global>
     <remote>
       <play>PlayPause</play>
-      <!-- Optionally redefine the pause key to send a "stop" which is useful
+      <!-- Optionally redefine the pause key to send a "Stop" which is useful
       if using multiple kodi nodes and you want to resume where left off on
       any node.  Also useful if you want your screensaver to turn on which it
-      will not if the video is paused but it will if stopped.
-      <pause>Stop</pause> -->
+      will not if the video is paused but it will if stopped. -->
       <pause>Pause</pause>
       <stop>Stop</stop>
       <forward>FastForward</forward>
@@ -68,9 +67,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <epgsearch>ActivateWindow(TVSearch)</epgsearch>
       <red>PlayerProcessInfo</red>
       <green>ActivateWindow(Videos)</green>
-      <!-- uncomment the below yellow to use audio_switch.py
-      and be sure you comment the default one to activate the screensaver
-      <yellow>RunScript("/var/lib/kodi/bin/audio_switch.py")</yellow> -->
+      <!-- if you want to use audio_switch.py, change the target of the next
+      line to: RunScript("/var/lib/kodi/bin/audio_switch.py") -->
       <yellow>ActivateScreensaver</yellow>
       <blue>ShowSubtitles</blue>
       <display>Playlist</display>
@@ -221,9 +219,11 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <hash>AudioNextLanguage</hash>
       <pageplus>AudioDelayPlus</pageplus>
       <pageminus>AudioDelayMinus</pageminus>
-      <!-- comment the following if NOT using audio_switch.py
-      <yellow>AspectRatio</yellow> -->
-      <display>AspectRatio</display>
+      <!-- optionally comment the following definition of yellow
+      to allow the global setting to be applied here which you
+      will likely want if you are using audio_switch.py defined above -->
+      <yellow>AspectRatio</yellow>
+      <info>AudioNextLanguage</info>
     </remote>
   </FullscreenVideo>
   <VideoTimeSeek>
