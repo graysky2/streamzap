@@ -31,11 +31,13 @@ print((xbmc.executeJSONRPC('{"jsonrpc":"2.0","method":"Settings.GetSettingValue"
 if not os.path.isfile(tempfile0):
 	# optical out
 	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"ALSA:iec958:CARD=PCH,DEV=0"}, "id":1}')
+	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.passthrough","value":true}, "id":1}')
 	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"Soundbar", "image":"/var/lib/kodi/fiber.png"}, "id":1}')
 	file = open(tempfile0, "a")
 	file.close()
 else:
 	# HDMI out
 	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.audiodevice", "value":"ALSA:hdmi:CARD=HDMI,DEV=1"}, "id":1}')
+	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"audiooutput.passthrough","value":false}, "id":1}')
 	xbmc.executeJSONRPC('{"jsonrpc":"2.0", "method":"GUI.ShowNotification", "params":{"title":"AUDIO OUTPUT", "message":"TV Speakers", "image":"/var/lib/kodi/hdtv-green.png"}, "id":1}')
 	os.remove(tempfile0)
