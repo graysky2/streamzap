@@ -182,11 +182,11 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
     <remote>
       <zero>Number0</zero>
       <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio)
-      You have to enable video sync for this to have any effect -->
+      You have to enable "Sync playback to display" for this to have any effect -->
       <one>PlayerControl(tempodown)</one>
       <two>Number2</two>
       <!-- Hitting "3" speeds up to a max of 1.5x video play back (video+audio)
-      You have to enable video sync for this to have any effect -->
+      You have to enable "Sync playback to display" for this to have any effect -->
       <three>PlayerControl(tempoup)</three>
       <four>Number4</four>
       <five>Number5</five>
