@@ -55,7 +55,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <volumeplus>VolumeUp</volumeplus>
       <volumeminus>VolumeDown</volumeminus>
       <mute>Mute</mute>
-      <power>ShutDown()</power>
+      <!-- for instant off, use: <power>ShutDown()</power> -->
+      <power>ActivateWindow(shutdownmenu</power>
       <myvideo>ActivateWindow(Videos)</myvideo>
       <mymusic>ActivateWindow(Music)</mymusic>
       <mypictures>ActivateWindow(Pictures)</mypictures>
