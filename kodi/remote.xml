@@ -44,7 +44,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <menu>ContextMenu</menu>
       <contentsmenu>PreviousMenu</contentsmenu>
       <rootmenu>PreviousMenu</rootmenu>
-      <title>ToggleWatched</title>
+      <red>ToggleWatched</red>
       <info>Info</info>
       <skipplus>SkipNext</skipplus>
       <skipminus>SkipPrevious</skipminus>
@@ -56,7 +56,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <volumeminus>VolumeDown</volumeminus>
       <mute>Mute</mute>
       <!-- for instant off, use: <power>ShutDown()</power> -->
-      <power>ActivateWindow(shutdownmenu</power>
+      <!--  <power>ActivateWindow(ShutdownMenu)</power> -->
+      <power>Shutdown()</power>
       <myvideo>ActivateWindow(Videos)</myvideo>
       <mymusic>ActivateWindow(Music)</mymusic>
       <mypictures>ActivateWindow(Pictures)</mypictures>
@@ -206,7 +207,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <start>OSD</start>
       <select>PlayPause</select>
       <record>audiodelay</record>
-      <red>PlayerProcessInfo</red>
+     <red>PlayerProcessInfo</red>
       <green>Info</green>
       <blue>NextSubtitle</blue>
       <title>PlayerProcessInfo</title>
