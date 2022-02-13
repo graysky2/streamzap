@@ -48,8 +48,5 @@ For the commands the layout following layout is used
     <eight>KEY_8</eight>
     <nine>KEY_9</nine>
     <zero>KEY_0</zero>
-    <display>KEY_DISPLAYTOGGLE</display>
-    <title>KEY_ZOOM</title>
-    <info>KEY_HELP</info>
   </remote>
 </lircmap>

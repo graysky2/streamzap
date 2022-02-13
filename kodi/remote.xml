@@ -17,7 +17,7 @@ would automatically go to Music on the press of the B button.
 An empty action removes the corresponding mapping from default and parent keymaps.
 This is different from a "noop" action, which disables a button.
 
-More documentation on keymaps can be found on http://kodi.wiki/view/keymaps
+More documentation on keymaps can be found on https://kodi.wiki/view/keymaps
 
 This version modified by graysky (https://github.com/graysky2/streamzap) -->
 <keymap>
@@ -44,11 +44,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <menu>ContextMenu</menu>
       <contentsmenu>PreviousMenu</contentsmenu>
       <rootmenu>PreviousMenu</rootmenu>
-      <red>ToggleWatched</red>
-      <info>Info</info>
       <skipplus>SkipNext</skipplus>
       <skipminus>SkipPrevious</skipminus>
-      <display>FullScreen</display>
       <start>PreviousMenu</start>
       <record>Play</record>
       <eject>EjectTray()</eject>
@@ -56,7 +53,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <volumeminus>VolumeDown</volumeminus>
       <mute>Mute</mute>
       <!-- for instant off, use: <power>ShutDown()</power> -->
-      <!--  <power>ActivateWindow(ShutdownMenu)</power> -->
+      <!-- <power>ActivateWindow(ShutdownMenu)</power> -->
       <power>Shutdown()</power>
       <myvideo>ActivateWindow(Videos)</myvideo>
       <mymusic>ActivateWindow(Music)</mymusic>
@@ -67,13 +64,12 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <liveradio>ActivateWindow(RadioChannels)</liveradio>
       <recordedtv>ActivateWindow(TVRecordings)</recordedtv>
       <epgsearch>ActivateWindow(TVSearch)</epgsearch>
-      <red>PlayerProcessInfo</red>
+      <red>ToggleWatched</red>
       <green>ActivateWindow(Videos)</green>
       <!-- if you want to use audio_switch.py, change the target of the next
       line to: RunScript("/var/lib/kodi/bin/audio_switch.py") -->
       <yellow>ActivateScreensaver</yellow>
       <blue>ShowSubtitles</blue>
-      <display>Playlist</display>
       <zero>Number0</zero>
       <one>Number1</one>
       <two>JumpSMS2</two>
@@ -93,7 +89,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <blue>ActivateWindow(Weather)</blue>
       <clear>ActivateWindow(Weather)</clear>
       <hash>ActivateWindow(Settings)</hash>
-      <display>ActivateScreensaver</display>
     </remote>
   </Home>
   <TVRecordings>
@@ -207,11 +202,9 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <start>OSD</start>
       <select>PlayPause</select>
       <record>audiodelay</record>
-     <red>PlayerProcessInfo</red>
+      <red>PlayerProcessInfo</red>
       <green>Info</green>
       <blue>NextSubtitle</blue>
-      <title>PlayerProcessInfo</title>
-      <info>Info</info>
       <guide>ActivateWindow(PVROSDGuide)</guide>
       <teletext>ActivateWindow(Teletext)</teletext>
       <subtitle>NextSubtitle</subtitle>
@@ -225,7 +218,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       to allow the global setting to be applied here which you
       will likely want if you are using audio_switch.py defined above -->
       <yellow>AspectRatio</yellow>
-      <info>AudioNextLanguage</info>
     </remote>
   </FullscreenVideo>
   <VideoTimeSeek>
@@ -236,9 +228,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
   </VideoTimeSeek>
   <FullscreenInfo>
     <remote>
-      <title>PlayerProcessInfo</title>
+      <red>PlayerProcessInfo</red>
       <green>Back</green>
-      <info>Back</info>
       <menu>OSD</menu>
       <contentsmenu>OSD</contentsmenu>
       <rootmenu>OSD</rootmenu>
@@ -260,13 +251,12 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <pageplus>IncreaseRating</pageplus>
       <pageminus>DecreaseRating</pageminus>
       <back>Back</back>
-      <title>PlayerProcessInfo</title>
+      <red>PlayerProcessInfo</red>
       <select>OSD</select>
       <menu>OSD</menu>
       <contentsmenu>OSD</contentsmenu>
       <rootmenu>OSD</rootmenu>
       <start>OSD</start>
-      <info>Info</info>
       <guide>ActivateWindow(PVROSDGuide)</guide>
       <playlist>ActivateWindow(PVROSDChannels)</playlist>
     </remote>
@@ -276,8 +266,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <menu>Back</menu>
       <contentsmenu>Back</contentsmenu>
       <rootmenu>Back</rootmenu>
-      <title>Info</title>
-      <info>PlayerProcessInfo</info>
     </remote>
   </MusicOSD>
   <VisualisationPresetList>
@@ -299,10 +287,8 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <seven>ZoomLevel7</seven>
       <eight>ZoomLevel8</eight>
       <nine>ZoomLevel9</nine>
-      <info>Info</info>
       <skipplus>NextPicture</skipplus>
       <skipminus>PreviousPicture</skipminus>
-      <title>Info</title>
       <select>Rotate</select>
     </remote>
   </SlideShow>
@@ -310,7 +296,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
     <remote>
       <select>NextCalibration</select>
       <zero>ResetCalibration</zero>
-      <display>NextResolution</display>
       <xbox>NextResolution</xbox>
     </remote>
   </ScreenCalibration>
@@ -333,8 +318,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <menu>OSD</menu>
       <contentsmenu>OSD</contentsmenu>
       <rootmenu>OSD</rootmenu>
-      <info>Info</info>
-      <title>PlayerProcessInfo</title>
+      <red>PlayerProcessInfo</red>
       <zero>Number0</zero>
       <one>Number1</one>
       <two>Number2</two>
@@ -407,16 +391,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <pageplus>CursorRight</pageplus>
     </remote>
   </VirtualKeyboard>
-  <ContextMenu>
-    <remote>
-      <title>Back</title>
-    </remote>
-  </ContextMenu>
-  <Programs>
-    <remote>
-      <info>info</info>
-    </remote>
-  </Programs>
   <NumericInput>
     <remote>
       <zero>Number0</zero>
@@ -507,16 +481,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <back>PreviousMenu</back>
     </remote>
   </submenu>
-  <MusicInformation>
-    <remote>
-      <info>Back</info>
-    </remote>
-  </MusicInformation>
-  <MovieInformation>
-    <remote>
-      <info>Back</info>
-    </remote>
-  </MovieInformation>
   <LockSettings>
     <remote>
       <menu>Back</menu>
@@ -535,7 +499,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
     <remote>
       <skipplus>NextPicture</skipplus>
       <skipminus>PreviousPicture</skipminus>
-      <info>Back</info>
     </remote>
   </PictureInfo>
   <Teletext>
@@ -554,7 +517,6 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <green>Green</green>
       <yellow>Yellow</yellow>
       <blue>Blue</blue>
-      <info>Info</info>
       <menu>Back</menu>
       <contentsmenu>Back</contentsmenu>
       <rootmenu>Back</rootmenu>
@@ -698,7 +660,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
   </Addon>
   <PlayerProcessInfo>
     <remote>
-      <title>PlayerProcessInfo</title>
+      <red>PlayerProcessInfo</red>
     </remote>
   </PlayerProcessInfo>
 </keymap>
