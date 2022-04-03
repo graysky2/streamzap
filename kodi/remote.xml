@@ -201,7 +201,7 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <rootmenu>OSD</rootmenu>
       <start>OSD</start>
       <select>PlayPause</select>
-      <record>audiodelay</record>
+      <record>AudioNextLanguage</record>
       <red>PlayerProcessInfo</red>
       <green>Info</green>
       <blue>NextSubtitle</blue>
