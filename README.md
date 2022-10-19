@@ -12,6 +12,7 @@ Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/i
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
 * Place `kodi/Lircmap.xml` into `~/.kodi/userdata/`
 * Place `kodi/remote.xml` into `~/.kodi/userdata/keymaps/`
+* Note there does not appear to be a need to define a custom config in `/etc/lirc/lircd.conf.d/` any more.  Just use the package provided `devinput.lircd.conf`
 
 #### Optional setup/custom script
 * Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments of the file).
@@ -22,10 +23,12 @@ For whatever reason, I am unable to get lirc to run correctly as an unprivileged
 
 * Install lirc for your distro.
 * Edit `/etc/lirc/lirc_options.conf` and change the `driver = devinput` line to `driver = default`
-* Place `00-Streamzap_PC_Remote.conf` into `/etc/lirc/lircd.conf.d/`
+* Place `streamzap.lircd.conf` into `/etc/lirc/lircd.conf.d/`
 * Place `kodi/Lircmap.xml` into `~/.kodi/userdata/`
 * Place `kodi/remote.xml` into `~/.kodi/userdata/keymaps/`
 * Start lirc using your init system (systemd, openrc, upstart, etc.)
+
+Note that on Arch ARM, lirc-1:0.10.2-1 breaks this so revert back to 1:0.10.2-12 and add lirc to the IgnorePkg array in `/etc/pacman.conf` to keep it.  Users not wishing to build the package themselves can download the last-good version from [here](http://tardis.tiny-vps.com/aarm/packages/l/lirc/).
 
 ### Supplemental info
 #### Kodi upstream links
