@@ -51,6 +51,9 @@ This version modified by graysky (https://github.com/graysky2/streamzap) -->
       <eject>EjectTray()</eject>
       <volumeplus>VolumeUp</volumeplus>
       <volumeminus>VolumeDown</volumeminus>
+      <!-- alternative config is to use vol buttons for subtitle delay -->
+      <!-- <volumeplus>SubtitleDelayPlus</volumeplus>
+      <volumeminus>SubtitleDelayMinus</volumeminus> -->
       <mute>Mute</mute>
       <!-- for instant off, use: <power>ShutDown()</power> -->
       <!-- <power>ActivateWindow(ShutdownMenu)</power> -->
