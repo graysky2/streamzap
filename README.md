@@ -4,7 +4,7 @@
 Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work with Kodi under Linux is fairly straight forward.
 
 ## Update Jan/2023
-My recommended method for using this remote with Kodi is not longer via lirc.  This presented disconnects in functionality running kodi-x11 vs kodi-gbm.  The most general implementation for using this remote with Kodi, is allowing the kernel driver to see it and adjusting the keymapping to suit Kodi.
+My recommended method for using this remote with Kodi is no longer via lirc.  Doing so presents disconnects in functionality running kodi-x11 vs kodi-gbm.  The most general implementation for using this remote with Kodi, is to allow the kernel driver to see it as a keyboard, not a remote, and to adjust the keymapping to suit Kodi.
 
 * The really old (details for mythtv, mplayer, other) has been archived in [streamzap/old](https://github.com/graysky2/streamzap/tree/old) for those interested.
 * The method using lirc (works fine for x11 but not for gbm) has been archived in [streamzap/lirc](https://github.com/graysky2/streamzap/tree/lirc) for those interested.
@@ -29,6 +29,12 @@ My recommended method for using this remote with Kodi is not longer via lirc.  T
 #### Optional setup/custom script
 * Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments of the file).
 * Optionally place the two suggested icons into `~` as shown in the script.
+
+#### On the homescreen/library
+<img src="https://github.com/graysky2/streamzap/blob/master/graphics/home.png" width="480" />
+
+#### In video playback
+<img src="https://github.com/graysky2/streamzap/blob/master/graphics/video.png" width="600" />
 
 ### Supplemental info
 #### Kodi upstream links
