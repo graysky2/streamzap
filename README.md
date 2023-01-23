@@ -1,21 +1,30 @@
-## Update Dec/2022
-With the release of lirc 0.10.2, we can use the devinput driver with no other customizations on both x86_64 (kodi-x11) and arm64 (kodi-gbm).  The more expansive version (details for mythtv, mplayer, other) has been archived in [streamzap/old](https://github.com/graysky2/streamzap/tree/old) for those interested.
-
 ## Streamzap
 ![remote](https://i.postimg.cc/02Yd39dh/photo05.jpg)
 
-Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work with Kodi under Linux is fairly straight forward.  This repo contains instructions and files to allow operation with [LIRC](http://www.lirc.org).
+Getting the [Streamzap USB remote](http://www.streamzap.com/consumer/pc_remote/index.php) to work with Kodi under Linux is fairly straight forward.
 
-### Setup LIRC
-* Install lirc for your distro.
-* Make sure that lirc is using the `devinput` driver which has been defaulted for a number of years now.  Likely, your distro defines this in `/etc/lirc/lirc_options.conf`.
-* Start lirc using your init system (systemd, openrc, upstart, etc.)
-* Place `kodi/Lircmap.xml` into `~/kodi/userdata/`
-* Place `kodi/remote.xml` into `~/.kodi/userdata/keymaps/`
-* Note there does not appear to be a need to define a custom config in `/etc/lirc/lircd.conf.d/` any more.  Just use the package provided `devinput.lircd.conf`
-* It should be noted that user can regenerate this file by calling `lirc-make-devinput > /etc/lirc/lircd.conf.d/devinput.lircd.conf`
+## Update Jan/2023
+My recommended method for using this remote with Kodi is not longer via lirc.  This presented disconnects in functionality running kodi-x11 vs kodi-gbm.  The most general implementation for using this remote with Kodi, is allowing the kernel driver to see it and adjusting the keymapping to suit Kodi.
 
-Note that by default, `lircd` runs as root user.  However, for increased stability and security, upstream recommends running it as an unprivileged user.  See [Appendix 14](http://www.lirc.org/html/configuration-guide.html) and/or [this](https://wiki.archlinux.org/index.php/LIRC#Running_as_a_regular_user_rather_than_as_root) Arch Wiki page for that setup.  Arch users may build and install [lirc-user-service](https://aur.archlinux.org/packages/lirc-user-service) to automatically configure this behavior.
+* The really old (details for mythtv, mplayer, other) has been archived in [streamzap/old](https://github.com/graysky2/streamzap/tree/old) for those interested.
+* The method using lirc (works fine for x11 but not for gbm) has been archived in [streamzap/lirc](https://github.com/graysky2/streamzap/tree/lirc) for those interested.
+
+### Setup
+* Install the v4l-utils package (your distro provides this in all likelihood).
+* Place [kodi/keyboard.xml](https://raw.githubusercontent.com/graysky2/streamzap/master/kodi/keyboard.xml) into `~/.kodi/userdata/keymaps/`
+* Place [streamzap.toml](https://raw.githubusercontent.com/graysky2/streamzap/master/streamzap.toml) into `/etc/rc_keymaps/`
+* Modify `/etc/rc_maps.cfg` so the streamzap line points to `/etc/rc_keymaps/streamzap.toml`
+```
+# *  rc-streamzap             streamzap.toml
+* rc-streamzap             /etc/rc_keymaps/streamzap.local
+```
+
+* First time setup only: reboot your system or re-initialize the keycode mapping to use the custom file:
+```
+# ir-keytable -c -w /etc/rc_keymaps/streamzap.toml
+```
+
+* THERE IS NO NEED TO RUN LIRC AT ALL so disable lircd in your init system if you previously had it enabled.
 
 #### Optional setup/custom script
 * Optionally place `kodi/audio_switch/audio_switch.py` in `~/bin/` (note you likely need to edit the code to match your system, see the thread in the comments of the file).
