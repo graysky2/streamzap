@@ -103,7 +103,6 @@
       <j>ActivateWindow(RadioChannels)</j>
       <k>ActivateWindow(TVRecordings)</k>
       <b>ActivateWindow(TVTimers)</b>
-      <!-- PVR -->
       <f1>ToggleWatched</f1>
       <f3>RunScript("/var/lib/kodi/bin/audio_switch.py")</f3>
       <!-- Multimedia keyboard keys -->
@@ -618,6 +617,7 @@
   <Videos>
     <keyboard>
       <m>ContextMenu</m>
+      <esc>Back</esc>
       <delete>Delete</delete>
       <n>Playlist</n>
       <w>ToggleWatched</w>
