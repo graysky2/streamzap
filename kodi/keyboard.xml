@@ -348,8 +348,8 @@
       <r>Rewind</r>
       <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio)
       You have to enable "Sync playback to display" for this to have any effect -->
-      <one>PlayerControl(tempodown)</one>
-      <three>PlayerControl(tempoup)</three>
+      <F11>PlayerControl(tempodown)</F11>
+      <F12>PlayerControl(tempoup)</F12>
       <period>StepForward</period>
       <comma>StepBack</comma>
       <backspace>Fullscreen</backspace>
@@ -369,7 +369,7 @@
       <enter mod="longpress">PlayPause</enter>
       <m>OSD</m>
       <menu>OSD</menu>
-      <i>Info</i>
+      <i>PlayerDebug</i>
       <o>PlayerProcessInfo</o>
       <o mod="ctrl,shift">PlayerDebug</o>
       <o mod="alt">PlayerDebugVideo</o>

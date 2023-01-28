@@ -31,7 +31,7 @@ My recommended method for using this remote with Kodi is no longer via lirc.  Do
 * Optionally place the two suggested icons into `~` as shown in the script.
 
 #### On the homescreen/library
-<img src="https://github.com/graysky2/streamzap/blob/master/graphics/home.png" width="480" />
+<img src="https://github.com/graysky2/streamzap/blob/master/graphics/home.png" width="600" />
 
 #### In video playback
 <img src="https://github.com/graysky2/streamzap/blob/master/graphics/video.png" width="600" />
