@@ -10,7 +10,8 @@ My recommended method for using this remote with Kodi is no longer via lirc.  Do
 * The method using lirc (works fine for x11 but not for gbm) has been archived in [streamzap/lirc](https://github.com/graysky2/streamzap/tree/lirc) for those interested.
 
 ### Setup
-* Install the v4l-utils package (your distro provides this in all likelihood).
+* On Arch/Arch ARM, install the `v4l-utils` package.
+* Users of other distros may also need to install the `ir-keytable` package (Ubuntu has this requirement).
 * Place [kodi/keyboard.xml](https://raw.githubusercontent.com/graysky2/streamzap/master/kodi/keyboard.xml) into `~/.kodi/userdata/keymaps/`
 * Place [streamzap.toml](https://raw.githubusercontent.com/graysky2/streamzap/master/streamzap.toml) into `/etc/rc_keymaps/`
 * Modify `/etc/rc_maps.cfg` so the streamzap line points to `/etc/rc_keymaps/streamzap.toml`
