@@ -41,4 +41,4 @@ My recommended method for using this remote with Kodi is no longer via lirc.  Do
 #### Kodi upstream links
 * [keyboard.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/keyboard.xml)
 * [remote.xml](https://github.com/xbmc/xbmc/blob/master/system/keymaps/remote.xml)
-* [List of built-in function](http://kodi.wiki/view/List_of_built-in_functions)
+* [List of built-in function](https://kodi.wiki/view/List_of_built-in_functions)
