@@ -346,8 +346,9 @@
     <keyboard>
       <f>FastForward</f>
       <r>Rewind</r>
-      <!-- Hitting "1" slows down to a max of 0.8x the video play back (video+audio)
-      You have to enable "Sync playback to display" for this to have any effect -->
+      <!-- "Play" slows down play back (video+audio) as slowly as 0.8x
+      while "Pause" speeds up play back up to 1.5x.  You have to enable
+      "Sync playback to display" for this to have any effect -->
       <F11>PlayerControl(tempodown)</F11>
       <F12>PlayerControl(tempoup)</F12>
       <period>StepForward</period>
